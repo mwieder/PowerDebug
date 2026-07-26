@@ -1,0 +1,313 @@
+PowerDebug Release Notes
+
+The download site for PowerDebug is https://www.ahsoftware.net/PowerTools/files/PowerDebug/PowerDebug.zip
+You will need your username and registration code to download the file.
+Documentation is at https://powerdebug.ahsoftware.net
+
+PowerDebug 2.4.7 Release Notes
+2026.07.25
+View variables as text,hex,decimal:
+right click on variable name to invoke popup menu
+
+PowerDebug 2.4.6
+2024.06.20
+Added uDontSwitchDarkMode property for OXT
+
+PowerDebug 2.4.3
+2023.02.05
+Nested arrays weren't displaying properly
+
+PowerDebug 2.4.2
+2023.01.09
+Fixed problem with commas in file paths
+Fixed code colorization from error activation
+Fixed line numbering from error activation
+Script launch from error dialog was grabbing wrong object
+Fixed empty variable display on runtime error
+
+PowerDebug 2.4.1
+2022.12.29
+Comment italics preference was causing error if invoked just from Development menu
+Adjusted About box control placement to avoid overlap
+
+PowerDebug 2.4.0
+2022.12.27
+CheckForUpdate now allows version 2.4 as well as 2.4.0 in future builds
+Fixed watched variables deletion
+Fixed stepOver function - no longer relying only on the traceuntil
+Fixed stepOut function (was executing one extra command if only one level deep)
+Adjusted code highlight color to be more readable
+Fixed removal of ghost breakpoints (now using long id)
+Temporary disabling of PowerDebug for single session: bring up preferences pane, click the red disable switch
+
+PowerDebug 2.3.8
+2022.10.12
+Fixed multiline non-array variable display
+
+PowerDebug 2.3.7
+2022.10.11
+Refactored the display and manipulation of arrays
+
+PowerDebug 2.3.6
+2022.10.05
+Removed quotes from variable names (annoying visual display only)
+
+PowerDebug 2.3.5
+2022.09.09
+Renamed wantToDownload stack to remove conflict with PowerTools
+
+PowerDebug 2.3.4
+2022.08.12
+On update check, display release notes if available.
+
+PowerDebug 2.3.3
+2022.08.11
+Backpedalled a bit to allow functioning on raspberry pi.
+Had to resort to "do" in two places to avoid compiler error.
+No other changes. If you're not working on a pi this won't affect you.
+
+PowerDebug 2.3.2 Release Notes
+2022.06.25
+Fixed inability to expand arrays passed as parameters
+
+PowerDebug 2.3.1 Release Notes
+2022.06.14
+Workaround for libURL authorization failure bug
+
+PowerDebug 2.3.0 Release Notes
+2022.04.04
+Updated version checking for LC 10
+More efficient (faster) remote debugging
+Faster and more robust code profiling
+Compatibility back to LiveCode 8.0
+
+PowerDebug 2.2.8 Release Notes
+2021.11.23
+Fixed preferences saving and loading
+Improved colorizing
+
+PowerDebug 2.2.7 Release Notes
+2021.07.21
+Refactored variable display for faster array processing
+Now able to display and edit multiline variable values
+Sorting variables enabled on variable name only
+Added preference to check for updates on IDE launch
+
+PowerDebug 2.2.4 Release Notes
+added arrayData property for compatibility with tree widget
+
+PowerDebug 2.2.3 Release Notes
+2020.21.22
+Variables and array elements can display and edit non-printable characters
+ i.e., null = "\0"
+
+PowerDebug 2.2.1 Release Notes
+2020.05.12
+Code Profiling start and stop from the Development menu
+Faster code profiling
+Renamed stack app to PowerDebug from revPowerDebug with addition of "_ideoverride" property
+Script button from error dialog launches glx2 script editor if enabled
+Better location of error condition within script line
+
+PowerDebug 2.2.0 Release Notes
+2020.01.21
+Line numbers for debug script window (yes, finally!)
+Code profiling (control-F8 to start profiling)
+   dispatch "toggleProfiling" -- from anywhere will start profiling
+Added gdb keyboard equivalents
+Control-F9 is alternate for control-break for ThinkPad laptops missing a Break key
+
+PowerDebug 2.1.6 Release Notes
+2019.08.04
+Some speed increases, especially in expanding arrays
+Several bug fixes:
+Changing motif between Alabaster and Chalkboard didn't work
+Saving preferences from color changing crashed LC9.5
+Adjusted preferences text display for linux
+Context now properly selects environment and variables
+Error display:
+Object context display toggles between long id and rugged name
+Error/breakpoint display now shows stack trace (how did I get here?)
+
+PowerDebug 2.1.5 Release Notes
+2019.07.20
+Refactored the display of multidimensional arrays
+Spaces in array keys no longer confound array element displays
+Fixed editing of arrays and array elements
+Refactored resizing of columns
+Added resizing of array editing columns
+Changing context didn't always collect new variables
+
+PowerDebug 2.1.4 Release Notes
+2019.06.26
+Fixed toggled deletion of ghost breakpoints
+
+PowerDebug 2.1.2 Release Notes
+2018.01.23
+Arrays now show the number of elements
+because opening hundreds of elements can take a very long time
+
+PowerDebug 2.1.1 Release Notes
+2017.10.11
+Fixed embarassing bug examining multidimension arrays (heh...nobody noticed)
+Improved pinpointing failure when error occurs in an external.
+Better handling of empty errors from the engine in LC9.
+Fixed "application is still executing" hang.
+
+PowerDebug 2.1 Release Notes
+2016.09.01
+Added error dialog support for .livecodescript files.
+
+PowerDebug 1.1.18 Release Notes
+2015.08.30
+Added support for the IDE script editor temporary breakpoints
+Also attempting to patch in the IDE's breakpoint conditions
+There's an engine bug that prevents watched variables from being set in LC 7/8.
+I filed a bug report on it, and hopefully it will be fixed soon.
+
+PowerDebug 1.1.17 Release Notes
+2015.08.23
+Fixed segfault on OSX when quitting LC7 IDE after debug session
+Copy button is no longer a default button
+Fixed tab setting for Global and Environment vars display
+Moved Error Display code from preOpenStack to Openstack to initialize fields
+
+PowerDebug 1.1.16 Release Notes
+2013.07.15
+Fixed "breakpoint #trace" hang
+Added milliseconds display to runtime error reporting
+
+PowerDebug 1.1.15 Release Notes
+2013.04.27
+LiveCode 6.0-compatible
+no protected scripts
+
+PowerDebug 1.1.14 Release Notes
+
+2012.12.10
+Runtime errors now report the deepest nested level rather than the tip of the iceberg.
+This affects the display in both PowerDebug and PowerExecutionError stacks.
+
+PowerDebug 1.1.13 Release Notes
+
+2012.12.04
+fixed bug that prevented the display of array contents in variable watcher
+fixed bug that caused error on aborting debug session if glx2 in memory but disabled
+
+PowerDebug 1.1.10 Release Notes
+
+2012.11.01
+Minor change for GLX2 plugin compatibility:
+SetWatch is no longer a private handler
+Right-click the script editor in GLX2 to bring up the contextual menu
+
+PowerDebug 1.1.9 Release Notes
+
+2012.09.11
+There is now a Breakpoints tab in addition to the Triggers tab.
+The Triggers tab highlights if there are watched variables.
+The filter textbox is now in the toolbar alongside the trace delay.
+The trace delay rescales properly with the stack resizing.
+Double-clicking a breakpoint in the list removes the breakpoint.
+Right-clicking a breakpoint edits that line in the script of that object.
+Global variables can now be watched variables.
+Resizing the stack hides/uncovers tabs as needed.
+
+PowerDebug 1.1.8 Release Notes
+
+2012.07.27
+Got Trace mode working again. I guess nobody was using it.
+There's a code coverage tool, of a sort:
+  Place a breakpoint early in the code
+  Set the trace delay to 0 for best results
+  When the debugger starts, click Trace
+    (Escape stops trace mode)
+  After tracing, select the Code Coverage tab
+    This will show you what lines of code have been executed.
+
+PowerDebug 1.1.7 Release Notes
+
+2012.04.27
+PowerExecutionError stack stays on screen
+Improvements to standalone debugging:
+  variables can now be edited
+  arrays can be examined and edited
+  (including multidimensional arrays)
+
+2012.04.21
+Standalone debugging is working again. See "Debugging Standalones.txt" for details.
+Debugging iOS is in the works.
+
+PowerDebug 1.1.6 Release Notes
+
+2012.02.11
+added Ken Ray's filter for bad globals to pwrUpdateVars
+chomp is now a command rather than a function
+
+PowerDebug 1.1.5 Release Notes
+2012.02.10
+fixed problem dealing with array elements with embedded quotes
+
+2012.01.15
+
+* pwrTraceBreak stops if pHandlerName is empty (messageHandled patch)
+* the traceabort was sometimes left false on exit, which locked up glx2
+
+PowerDebug 1.1.3 Release Notes
+2011.10.11
+
+ "..." was being added to all variable values
+ embedded quotes in array keys caused segment fault in dbgGetVariableValue
+ "set focus" in closestack was causing problems
+ leftover messagebox put for SE breakpoints removed
+ fixed multiline variables
+ highlight color set to gray
+
+PowerDebug 1.1.2 Release Notes
+2011.07.17
+ fixed floating Debug and Code Coverage buttons
+ added support for soft breakpoints from IDE script editor
+ fixed recursive crash displaying multidimensional arrays
+ prefs file is now real xml
+
+PowerDebug 1.1.1 Release Notes
+2011.05.23
+
+New:
+New toolbar icons
+New tab icons
+(these are hopefully more readable and easier to use)
+
+Bug fixes:
+The AutoHide tools stack was causing a conflict with the mouseMove handler in the revDictionary stack with rev 4.6.x (even if the feature wasn't turned on), so that feature has been disabled.
+Couldn't edit global and environment variables. Fixed by refactoring.
+
+Known issues:
+There's a socket problem with standalones trying to change variable values.
+Clicking in the variables display for standalones has been disabled until this is worked out.
+It's apparently somewhere in the engine, so it's out of my control for the moment.
+
+PowerDebug 1.1 Release Notes
+2011.05.07
+
+New:
+Major addition is the ability to debug standalone applications.
+Some code cleanup and refactoring.
+Toolbar buttons highlight is now more apparent.
+
+Files included here:
+ PowerDebug plugin : the debugger
+ PowerTrace plugin : message watcher replacement
+ libRemoteDebug : library substack for standalone applications
+ RemoteDebugSample : demonstration stack with breakpoints and errors
+ Notes:
+  Release Notes.txt : this file
+  Debugging Standalones.txt : how-to document
+
+Known issues:
+There's a socket problem with standalones trying to change variable values.
+Clicking in the variables display for standalones has been disabled until this is worked out.
+It's apparently somewhere in the engine, so it's out of my control for the moment.
+
+Mark Wieder
+Ah, Software
